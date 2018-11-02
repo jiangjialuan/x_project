@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>SEGA GAMING</title>
+    <script>
+      /*function toDesktop(sUrl, sName) {
+        try {
+          var WshShell = new ActiveXObject("WScript.Shell");
+          var oUrlLink = WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop") + "\\" + sName + ".url");
+          oUrlLink.TargetPath = sUrl;
+          oUrlLink.Save();
+        } catch (e) {
+          alert("当前IE安全级别不允许操作！");
+        }
+      };*/
+      window.onload = function() {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function(event) {
+          if (event.touches.length > 1) {
+            event.preventDefault();
+          }
+        });
+        document.addEventListener('touchend', function(event) {
+          var now = (new Date()).getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, false);
+
+        // 阻止双指放大
+        document.addEventListener('gesturestart', function(event) {
+          event.preventDefault();
+        });
+      }
+    </script>
+  </head>
+  <body id="body-box">
+    <div id="app"></div>
+    <!--<a style="position:fixed; top:50%; left:50%;z-index:9999999;" href="javascript:void(0);" onclick="toDesktop('http://zl.aisky.net/&#8217;','小龙驿站')">创建快捷方式</a>-->
+    <!-- built files will be auto injected -->
+  </body>
+</html>

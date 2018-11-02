@@ -1,0 +1,78 @@
+body{
+  background: #292A2A;
+  font-size:0.28rem;
+  position:relative;
+  -webkit-overflow-scrolling: touch;
+}
+html,body{
+  height: 100%;
+}
+#body{
+  background: url("../img/bg.png") no-repeat #0A3B2A;
+  background-size: cover;
+  position:fixed;
+  top:0px;
+  right:0px;
+  left:0px;
+  z-index:1;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+}
+.m-icon{
+  font-family:"mintui";font-style:normal;font-size:0.6rem;
+}
+#app{
+  position: relative;
+  z-index: 2;
+}
+.flex{
+  display: flex;
+}
+.mint-toast-text{
+  font-size:0.3rem !important;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-col{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+}
+*{
+  box-sizing:border-box;
+}
+p,body,html,span,div{
+  padding:0rem;
+  margin:0rem;
+}
+button,input,textarea{
+  background: transparent;
+  outline: none;
+  border:none;
+
+}
+.viewMore{
+  width:2.18rem;
+  height:0.6rem;
+  line-height:0.6rem;
+  border-radius:0.08rem;
+  border:0.02rem solid rgba(220,147,23,1);
+  color:rgba(220,147,23,1);
+  margin-top:0.6rem;
+  font-size:0.3rem;
+}
+
+.noMore{
+  width:2.18rem;
+  height:0.6rem;
+  border-radius:0.08rem;
+  color:rgba(220,147,23,1);
+  margin-top:0.6rem;
+  font-size:0.3rem;
+  padding:0px 0.1rem;
+}
